@@ -55,6 +55,18 @@
         <source-file src="src/android/FileProgressResult.java" target-dir="src/org/apache/cordova/filetransfer" />
         <source-file src="src/android/FileUploadResult.java" target-dir="src/org/apache/cordova/filetransfer" />
     </platform>
+    
+	<platform name="swt">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="FileTransfer" >
+                <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/swt/FileTransfer.java" target-dir="src/org/apache/cordova/filetransfer" />
+        <source-file src="src/swt/FileProgressResult.java" target-dir="src/org/apache/cordova/filetransfer" />
+        <source-file src="src/swt/FileUploadResult.java" target-dir="src/org/apache/cordova/filetransfer" />
+    </platform>
 
     <!-- ios -->
     <platform name="ios">
