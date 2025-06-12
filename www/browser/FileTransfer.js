@@ -292,7 +292,7 @@ FileTransfer.prototype.download = function (source, target, successCallback, err
                         function writeFile (entry) {
                             entry.createWriter(function (fileWriter) {
                                 fileWriter.onwriteend = function (evt) {
-                                    if (!evt.target.error) {
+                                    if (!evt || !evt.target.error) {
                                         entry.filesystemName = entry.filesystem.name;
                                         delete transfers[that._id];
                                         if (successCallback) {
